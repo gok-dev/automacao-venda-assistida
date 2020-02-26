@@ -1,0 +1,18 @@
+[caps]
+platformName = "Android"
+deviceName = "192.168.56.101:5555"
+app = "./app/base.apk"
+appPackage = "br.com.vendaassistida.debug"
+appActivity = "br.com.vendaassistida.MainActivity"
+autoGrantPermissions = true
+autoAcceptAlerts = true
+newCommandTimeout = 3600
+skipServerInstallation = true
+noReset = true
+skipDeviceInitialization = true
+
+[appium_lib]
+wait = 20
+server_url = "http://127.0.0.1:4723/wd/hub"
+sauce_username = ""
+sauce_access_key = ""
