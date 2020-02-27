@@ -30,6 +30,7 @@ class BaseScreen
     
     #Método para preencher um campo mapeado na tela por id.
       def send_keys_id(id, field)
+        $driver.find_element(:id, id).click
         $driver.find_element(:id, id).send_keys(field)
       end
     

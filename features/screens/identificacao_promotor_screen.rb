@@ -14,9 +14,8 @@ class IdentificacaoPromotorScreen < BaseScreen
     def selecionar_loja
         wait_for_id(@texto_voce_esta_aqui)
         click_id(@botao_estou_em_outra_loja)
-        send_keys_id(@campo_texto_codigo_loja, '18')
-        click_xpath("//*[@text='18 - Consolação']")
+        send_keys_id(@campo_texto_codigo_loja, '18 - Consolação')
         click_id(@botao_ok)
-        sleep 5
     end
 end
+
