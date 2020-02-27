@@ -20,3 +20,11 @@ caps[:appium_lib][:export_session] = true
 
 Appium::Driver.new(caps, true)
 Appium.promote_appium_methods Object
+
+Before do | cenario |
+  $driver.start_driver
+end
+
+After do | cenario |
+  $driver.driver_quit
+end
