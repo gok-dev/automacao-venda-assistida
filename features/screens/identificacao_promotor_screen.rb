@@ -31,6 +31,7 @@ class IdentificacaoPromotorScreen < BaseScreen
     def realizar_login(chapa, senha)
         preencher_chapa(chapa)
         preencher_senha(senha)
+        hide_keyboard
         clicar_entrar
         sleep 10
     end

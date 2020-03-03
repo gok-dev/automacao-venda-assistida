@@ -28,13 +28,11 @@ class BaseScreen
     def send_keys_id(id, field)
       $driver.find_element(:id, id).click
       $driver.find_element(:id, id).send_keys(field)
-      hide_keyboard
     end
   
   #Método para preencher um campo mapeado na tela por xpath.
     def send_keys_xpath(xpath, field)
       $driver.find_element(:xpath, xpath).send_keys(field)
-      hide_keyboard
     end
 
   #Método para clicar no enter do teclado.

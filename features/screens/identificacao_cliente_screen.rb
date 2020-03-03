@@ -20,6 +20,7 @@ class IdentificacaoClienteScreen < BaseScreen
 
   def confirmar_cliente(cpf)
     preencher_cpf_cliente(cpf)
+    hide_keyboard
     clicar_entrar
   end
 
