@@ -37,7 +37,7 @@ class BaseScreen
 
   #Método para clicar no enter do teclado.
     def clicar_enter
-      $driver.sendKeyEvent(AndroidKeyCode.ENTER);
+      $driver.ress_keycode(66)
     end
 
   #Método para scrollar até o elemento
