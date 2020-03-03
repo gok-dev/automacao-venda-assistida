@@ -37,7 +37,7 @@ class BaseScreen
 
   #Método para clicar no enter do teclado.
     def clicar_enter
-      $driver.ress_keycode(66)
+      $driver.press_keycode(66)
     end
 
   #Método para scrollar até o elemento
