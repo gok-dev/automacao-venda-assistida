@@ -13,9 +13,26 @@ class IdentificacaoPromotorScreen < BaseScreen
 
     def selecionar_loja
         wait_for_id(@texto_voce_esta_aqui)
-        click_id(@botao_estou_em_outra_loja)
-        send_keys_id(@campo_texto_codigo_loja, '18 - Consolação')
-        click_id(@botao_ok)
+        click_id(@botao_estou_aqui)
+    end
+
+    def preencher_chapa(chapa)
+        send_keys_id(@campo_chapa, chapa)
+    end
+
+    def preencher_senha(senha)
+        send_keys_id(@campo_senha, senha)
+    end
+
+    def clicar_entrar
+        click_id(@botao_entrar)
+    end
+
+    def realizar_login(chapa, senha)
+        preencher_chapa(chapa)
+        preencher_senha(senha)
+        clicar_entrar
+        sleep 10
     end
 end
 
