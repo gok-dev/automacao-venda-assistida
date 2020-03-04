@@ -8,8 +8,6 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'faker'
 
-$wait = Selenium::WebDriver::Wait.new(timeout: 60)
-
 def load_appium_configuration
   dir = "#{Dir.pwd}/config/appium.txt"
   Appium.load_appium_txt file: File.expand_path(dir, __FILE__), verbose: true

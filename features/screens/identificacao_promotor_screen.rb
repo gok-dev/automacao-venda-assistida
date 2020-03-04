@@ -14,6 +14,9 @@ class IdentificacaoPromotorScreen < BaseScreen
     def selecionar_loja
         wait_for_id(@texto_voce_esta_aqui)
         click_id(@botao_estou_aqui)
+        # click_id(@botao_estou_em_outra_loja)
+        # send_keys_id(@campo_texto_codigo_loja, '18 - Consolação')
+        # click_id(@botao_ok)
     end
 
     def preencher_chapa(chapa)

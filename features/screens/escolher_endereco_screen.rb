@@ -6,7 +6,7 @@ class EscolherEnderecoScreen < BaseScreen
   end
 
   def selecionar_tipo_entrega
-    scroll_to_element(@xpath_tipo_entrega)
+    scroll_page
     click_xpath(@xpath_tipo_entrega)
   end
 

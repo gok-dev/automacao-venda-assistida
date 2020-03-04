@@ -37,5 +37,7 @@ Quando("finalizar a compra") do
 end
 
 Então("deve visualizar o número do pedido") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @pedido_finalizado_screen = PedidoFinalizadoScreen.new
+  @pedido_finalizado_screen.verificar_texto_obrigado
+  puts(@pedido_finalizado_screen.verificar_numero_do_pedido)
 end

@@ -1,14 +1,14 @@
 class BaseScreen
 
   #Método para esperar um elemento mapeado estar visível na tela por xpath durante 10s. 
-    def wait_for_xpath(xpath, timeout = 20)
+    def wait_for_xpath(xpath, timeout = 30)
       $driver.wait_true(timeout) do
       $driver.exists { $driver.find_element(:xpath, xpath) }
       end
     end 
   
   #Método para esperar um elemento mapeado estar visível na tela por id durante 10s.
-    def wait_for_id(id, timeout = 20)
+    def wait_for_id(id, timeout = 30)
       $driver.wait_true(timeout) do 
         $driver.exists { $driver.find_element(:id, id) }
       end
@@ -41,7 +41,12 @@ class BaseScreen
     end
 
   #Método para scrollar até o elemento
-    def scroll_to_element(element)
-      scroll_to(element)
+    def scroll_page
+      $driver.swipe start_x: 1000, start_y: 1000, end_x: 1000, end_y: 300
+    end
+
+  #Método para recuperar o texto de um elemento
+    def recuperar_texto(elemento)
+      find_element(:id, elemento).text
     end
 end

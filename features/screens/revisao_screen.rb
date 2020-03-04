@@ -5,7 +5,7 @@ class RevisaoScreen < BaseScreen
   end
 
   def clicar_botao_ir_para_pagamento
-    scroll_to_element(@botao_ir_para_pagamento)
+    scroll_page
     click_id(@botao_ir_para_pagamento)
   end
 

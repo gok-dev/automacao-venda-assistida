@@ -11,14 +11,13 @@ class GarantiasESegurosScreen < BaseScreen
   def selecionar_seguro
     click_xpath(@xpath_garantia_estendida_12_meses)
     sleep 1
-    $driver.swipe start_x: 1000, start_y: 1000, end_x: 1000, end_y: 300
+    scroll_page
     click_xpath(@xpath_seguro_roubo_e_furto_12_meses)
     sleep 1
-    $driver.swipe start_x: 1000, start_y: 1000, end_x: 1000, end_y: 300
+    scroll_page
   end
 
   def clicar_adicionar_a_sacola
-    #scroll_to_element(@botao_adicionar_a_sacola)
     click_id(@botao_adicionar_a_sacola)
   end
 
